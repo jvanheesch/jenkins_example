@@ -1,0 +1,6 @@
+#!groovy​
+package com.github.jvanheesch
+
+node {
+    echo "Hello World"
+}
