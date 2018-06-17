@@ -2,5 +2,5 @@
 package com.github.jvanheesch
 
 node {
-    echo "Test update polling woops"
+    echo "Test update polling shit"
 }
