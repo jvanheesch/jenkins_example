@@ -24,7 +24,7 @@ pipeline {
                         echo 'shit1'
                         checkoutProject(this)
                         test(this)
-//                        pom = this.readMavenPom()
+                        pom = this.readMavenPom()
                     }
                 }
             }
