@@ -12,6 +12,11 @@ pipeline {
         label 'master'
     }
 
+    tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
+    }
+
     options {
         disableConcurrentBuilds()
     }
@@ -34,7 +39,8 @@ pipeline {
                 timestamps {
                     script {
                         echo 'shit2'
-                        mvn(this, "clean install -U -T 1C -DskipTests=true")
+//                        mvn(this, "clean install -U -T 1C -DskipTests=true")
+                        sh 'mvn clean install -U -T 1C -DskipTests=true'
                     }
                 }
             }
