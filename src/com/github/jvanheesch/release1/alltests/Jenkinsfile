@@ -22,7 +22,7 @@ pipeline {
                 timestamps {
                     script {
                         echo 'shit1'
-//                        checkoutProject(this)
+                        checkoutProject(this)
                         test(this)
 //                        pom = this.readMavenPom()
                     }
