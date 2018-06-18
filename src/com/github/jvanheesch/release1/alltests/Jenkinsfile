@@ -23,7 +23,7 @@ pipeline {
                     script {
                         echo 'shit1'
 //                        checkoutProject(this)
-                        test();
+                        test()
 //                        pom = this.readMavenPom()
                     }
                 }
