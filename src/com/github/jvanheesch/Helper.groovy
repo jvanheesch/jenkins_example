@@ -14,6 +14,6 @@ class Helper {
     }
 
     static def test(script) {
-        script.echo 'test'
+//        script.echo 'test'
     }
 }
