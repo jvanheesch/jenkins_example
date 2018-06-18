@@ -13,7 +13,7 @@ class Helper {
         script.git branch: '20180618.testing.jenkins', changelog: false, poll: false, url: 'git@github.com:jvanheesch/util.git'
     }
 
-    static def test() {
-//        echo 'test'
+    static def test(script) {
+        script.sh "'test'"
     }
 }
