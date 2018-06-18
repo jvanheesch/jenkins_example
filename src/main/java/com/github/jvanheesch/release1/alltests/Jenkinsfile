@@ -1,8 +1,6 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
 
-import static Helper.*
-
 def pom
 
 pipeline {
@@ -20,8 +18,9 @@ pipeline {
             steps {
                 timestamps {
                     script {
-                        +checkoutProject(this)
-                        pom = this.readMavenPom()
+                        echo 'shit'
+//                        checkoutProject(this)
+//                        pom = this.readMavenPom()
                     }
                 }
             }
@@ -30,7 +29,7 @@ pipeline {
             steps {
                 timestamps {
                     script {
-                        mvn(this, "clean install -U -T 1C -DskipTests=true")
+//                        mvn(this, "clean install -U -T 1C -DskipTests=true")
                     }
                 }
             }
@@ -39,11 +38,11 @@ pipeline {
             steps {
                 timestamps {
                     script {
-                        mvn(this, "verify " +
-                                "-DskipUnitTests=false  " +
-                                "-DskipIntegrationTests=false " +
-                                "-Dconfig.plugin.failsafe.integrationTest.ignoreFailures=true " +
-                                "-Dconfig.plugin.surefire.unitTest.ignoreFailures=true")
+//                        mvn(this, "verify " +
+//                                "-DskipUnitTests=false  " +
+//                                "-DskipIntegrationTests=false " +
+//                                "-Dconfig.plugin.failsafe.integrationTest.ignoreFailures=true " +
+//                                "-Dconfig.plugin.surefire.unitTest.ignoreFailures=true")
                     }
                 }
             }
@@ -51,7 +50,7 @@ pipeline {
                 always {
                     timestamps {
                         script {
-                            publishTestResults(this)
+//                            publishTestResults(this)
                         }
                     }
                 }
