@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 echo 'Exiting with code 1'
-                sh exit 1
+                sh "exit 1"
                 echo 'This line should not be visible - script should have exited.'
             }
         }
