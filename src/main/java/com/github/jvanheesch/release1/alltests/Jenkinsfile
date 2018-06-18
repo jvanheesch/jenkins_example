@@ -2,7 +2,7 @@
 package com.github.jvanheesch.release1.alltests
 
 //@Library('test-joris')
-import static src.main.java.com.github.jvanheesch.release1.alltests.Helper.*
+import static Helper.*
 
 def pom
 
