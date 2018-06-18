@@ -3,7 +3,7 @@ package com.github.jvanheesch.declarative
 
 pipeline {
     agent {
-        teeeeest
+        label 'teeeeest'
     }
     stages {
         stage('Build') {
