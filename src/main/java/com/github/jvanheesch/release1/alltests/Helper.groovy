@@ -12,4 +12,8 @@ class Helper {
     static def checkoutProject(script) {
         script.git branch: '20180618.testing.jenkins', changelog: false, poll: false, url: 'git@github.com:jvanheesch/util.git'
     }
+
+    static def test() {
+        echo 'test'
+    }
 }
