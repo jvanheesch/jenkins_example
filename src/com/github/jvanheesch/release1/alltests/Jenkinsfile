@@ -34,7 +34,7 @@ pipeline {
                 timestamps {
                     script {
                         echo 'shit2'
-//                        mvn(this, "clean install -U -T 1C -DskipTests=true")
+                        mvn(this, "clean install -U -T 1C -DskipTests=true")
                     }
                 }
             }
