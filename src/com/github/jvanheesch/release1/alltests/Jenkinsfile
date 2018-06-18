@@ -1,8 +1,7 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
-
 @Library('test-joris')
-import static com.github.jvanheesch.Helper.*
+import java.lang.Object
 
 def pom
 
@@ -23,7 +22,7 @@ pipeline {
                     script {
                         echo 'shit1'
 //                        checkoutProject(this)
-                        test(this)
+//                        test(this)
 //                        pom = this.readMavenPom()
                     }
                 }
