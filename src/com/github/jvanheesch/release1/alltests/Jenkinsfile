@@ -17,6 +17,15 @@ pipeline {
     }
 
     stages {
+        stage('Slack') {
+            steps {
+                timestamps {
+                    script {
+                        slackSend channel: '#jenkins', color: 'good', message: 'Slack Message'
+                    }
+                }
+            }
+        }
         stage('Checkout') {
             steps {
                 timestamps {
