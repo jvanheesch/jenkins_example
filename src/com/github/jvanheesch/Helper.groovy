@@ -1,6 +1,6 @@
 package com.github.jvanheesch
 
-public class Helper {
+class Helper {
     static def mvn(script, args) {
         script.sh "${script.tool 'Maven'}/bin/mvn -s ${script.env.HOME}/jenkins.xml -o ${args}"
     }
