@@ -1,7 +1,7 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
 
-import static com.github.jvanheesch.Helper.*
+import static Helper.*
 
 def pom
 
