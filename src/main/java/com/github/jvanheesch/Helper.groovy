@@ -1,4 +1,4 @@
-package com.github.jvanheesch.release1.alltests
+package com.github.jvanheesch
 
 class Helper {
     static def mvn(script, args) {

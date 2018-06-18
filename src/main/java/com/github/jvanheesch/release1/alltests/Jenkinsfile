@@ -1,8 +1,8 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
 
-//@Library('test-joris')
-import static Helper.*
+@Library('test-joris')
+import static com.github.jvanheesch.Helper.*
 
 def pom
 
