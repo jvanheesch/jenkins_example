@@ -2,7 +2,7 @@
 package com.github.jvanheesch.release1.alltests
 
 @Library('test-joris')
-import com.github.jvanheesch.Helper.*
+import static com.github.jvanheesch.Helper.*
 
 def pom
 
@@ -23,7 +23,7 @@ pipeline {
                     script {
                         echo 'shit1'
 //                        checkoutProject(this)
-//                        test(this)
+                        test(this)
 //                        pom = this.readMavenPom()
                     }
                 }
