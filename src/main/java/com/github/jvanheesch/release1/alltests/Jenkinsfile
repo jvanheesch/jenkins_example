@@ -1,0 +1,80 @@
+#!groovy​
+package com.github.jvanheesch.release1.alltests
+
+import static com.github.jvanheesch.Helper.*
+
+def pom
+
+pipeline {
+    agent {
+        // TODO_JORIS: waar kan ik de namen van agents terugvinden?
+        label 'master'
+    }
+
+    options {
+        disableConcurrentBuilds()
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                timestamps {
+                    script {
+                        +checkoutProject(this)
+                        pom = this.readMavenPom()
+                    }
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                timestamps {
+                    script {
+                        mvn(this, "clean install -U -T 1C -DskipTests=true")
+                    }
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                timestamps {
+                    script {
+                        mvn(this, "verify " +
+                                "-DskipUnitTests=false  " +
+                                "-DskipIntegrationTests=false " +
+                                "-Dconfig.plugin.failsafe.integrationTest.ignoreFailures=true " +
+                                "-Dconfig.plugin.surefire.unitTest.ignoreFailures=true")
+                    }
+                }
+            }
+            post {
+                always {
+                    timestamps {
+                        script {
+                            publishTestResults(this)
+                        }
+                    }
+                }
+            }
+        }
+        stage('Notify') {
+            steps {
+                echo 'Sending notifications'
+            }
+            post {
+                unstable {
+                    script {
+                        echo 'Echoing failure - TODO: integrate with slack.'
+                    }
+                }
+            }
+        }
+    }
+    post {
+        failure {
+            script {
+                echo 'Echoing failure - TODO: integrate with slack.'
+            }
+        }
+    }
+}
