@@ -23,4 +23,11 @@ pipeline {
             }
         }
     }
+    post {
+        failure {
+            script {
+                echo 'Echoing failure.'
+            }
+        }
+    }
 }
