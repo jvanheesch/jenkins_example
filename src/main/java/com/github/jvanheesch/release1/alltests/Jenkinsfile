@@ -18,7 +18,7 @@ pipeline {
             steps {
                 timestamps {
                     script {
-                        echo 'shit'
+                        echo 'shit1'
 //                        checkoutProject(this)
 //                        pom = this.readMavenPom()
                     }
@@ -29,6 +29,7 @@ pipeline {
             steps {
                 timestamps {
                     script {
+                        echo 'shit2'
 //                        mvn(this, "clean install -U -T 1C -DskipTests=true")
                     }
                 }
@@ -38,6 +39,7 @@ pipeline {
             steps {
                 timestamps {
                     script {
+                        echo 'shit3'
 //                        mvn(this, "verify " +
 //                                "-DskipUnitTests=false  " +
 //                                "-DskipIntegrationTests=false " +
@@ -50,6 +52,7 @@ pipeline {
                 always {
                     timestamps {
                         script {
+                            echo 'shit4'
 //                            publishTestResults(this)
                         }
                     }
