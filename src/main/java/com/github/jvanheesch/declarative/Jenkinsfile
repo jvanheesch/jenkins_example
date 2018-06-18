@@ -2,7 +2,9 @@
 package com.github.jvanheesch.declarative
 
 pipeline {
-    agent teeeeest
+    agent {
+        teeeeest
+    }
     stages {
         stage('Build') {
             steps {
