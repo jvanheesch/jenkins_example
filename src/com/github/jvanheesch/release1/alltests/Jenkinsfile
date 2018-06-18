@@ -45,11 +45,11 @@ pipeline {
                 timestamps {
                     script {
                         echo 'shit3'
-//                        mvn(this, "verify " +
-//                                "-DskipUnitTests=false  " +
-//                                "-DskipIntegrationTests=false " +
-//                                "-Dconfig.plugin.failsafe.integrationTest.ignoreFailures=true " +
-//                                "-Dconfig.plugin.surefire.unitTest.ignoreFailures=true")
+                        mvn(this, "verify " +
+                                "-DskipUnitTests=false  " +
+                                "-DskipIntegrationTests=false " +
+                                "-Dconfig.plugin.failsafe.integrationTest.ignoreFailures=true " +
+                                "-Dconfig.plugin.surefire.unitTest.ignoreFailures=true")
                     }
                 }
             }
