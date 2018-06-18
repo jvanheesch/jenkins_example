@@ -1,12 +1,8 @@
 package com.github.jvanheesch
 
 class Helper {
-//    static def mvn(script, args) {
-//        script.sh "${script.tool 'maven'}/bin/mvn -s ${script.env.HOME}/jenkins.xml -o ${args}"
-//    }
-
-    def mvn(script, args) {
-        script.steps.sh "${script.steps.tool 'Maven'}/bin/mvn -o ${args}"
+    static def mvn(script, args) {
+        script.sh "${script.tool 'Maven'}/bin/mvn -s ${script.env.HOME}/jenkins.xml -o ${args}"
     }
 
     static def publishTestResults(script) {
