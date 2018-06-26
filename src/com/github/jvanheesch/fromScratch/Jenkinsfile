@@ -1,0 +1,31 @@
+#!groovy​
+package com.github.jvanheesch.fromScratch
+
+import static com.github.jvanheesch.GroovyConfig.*
+
+@Library('test-joris')
+import static com.github.jvanheesch.Helper.*
+
+def pom
+
+pipeline {
+    agent {
+        label 'master'
+    }
+
+    options {
+        disableConcurrentBuilds()
+    }
+    alltests
+    stages {
+        stage('Slack') {
+            steps {
+                timestamps {
+                    script {
+                        slackSend channel: slackChannel, color: slackColor, message: 'Slack Message'
+                    }
+                }
+            }
+        }
+    }
+}
