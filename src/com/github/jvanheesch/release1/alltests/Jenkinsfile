@@ -1,6 +1,8 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
 
+import com.github.jvanheesch.HelperGroovy
+
 @Library('test-joris')
 import static com.github.jvanheesch.Helper.*
 
