@@ -4,7 +4,7 @@ pipelineJob('Generated') {
             scm {
                 git('https://github.com/jvanheesch/jenkins_example.git')
             }
-            scriptPath("/src/com/github/jvanheesch/declarative/Jenskinsfile")
+            scriptPath("src/com/github/jvanheesch/release1/alltests/Jenkinsfile")
         }
     }
 }
