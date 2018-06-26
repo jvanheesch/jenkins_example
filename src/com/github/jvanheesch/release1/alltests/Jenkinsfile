@@ -33,7 +33,7 @@ pipeline {
                         echo 'shit1'
                         checkoutProject(this)
                         test(this)
-                        testUtilities(this)
+                        HelperGroovy.testUtilities(this)
                         pom = this.readMavenPom()
                     }
                 }
