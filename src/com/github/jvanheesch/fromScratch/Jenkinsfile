@@ -16,7 +16,6 @@ pipeline {
     options {
         disableConcurrentBuilds()
     }
-    alltests
     stages {
         stage('Slack') {
             steps {
