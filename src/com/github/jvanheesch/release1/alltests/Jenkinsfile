@@ -5,7 +5,7 @@ package com.github.jvanheesch.release1.alltests
 import static com.github.jvanheesch.Helper.*
 
 @Library('test-joris-java')
-import static com.github.jvanheesch.HelperJava.*
+import static com.github.jvanheesch.HelperGroovy.*
 
 def pom
 
@@ -13,7 +13,7 @@ pipeline {
     agent {
         // TODO_JORIS: waar kan ik de namen van agents terugvinden?
         label 'master'
-        someMethod()
+        testUtilities(this)
     }
 
     options {
