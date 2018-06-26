@@ -1,6 +1,8 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
 
+import static com.github.jvanheesch.GroovyConfig.*
+
 import com.github.jvanheesch.HelperGroovy
 
 @Library('test-joris')
@@ -23,7 +25,7 @@ pipeline {
             steps {
                 timestamps {
                     script {
-                        slackSend channel: '#jenkins', color: 'good', message: 'Slack Message'
+                        slackSend channel: jenkinsChannel, color: 'good', message: 'Slack Message'
                     }
                 }
             }
