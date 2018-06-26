@@ -1,10 +1,9 @@
 #!groovy​
 package com.github.jvanheesch.fromScratch
 
-import static com.github.jvanheesch.GroovyConfig.*
-
-//@Library('test-joris')
-//import static com.github.jvanheesch.Helper.*
+@Library('test-joris')
+import static com.github.jvanheesch.GroovyConfig.slackChannel
+import static com.github.jvanheesch.GroovyConfig.slackColor
 
 def pom
 
