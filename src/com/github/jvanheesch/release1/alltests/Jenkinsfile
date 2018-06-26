@@ -95,6 +95,7 @@ pipeline {
     post {
         failure {
             script {
+                echo "FAILURE"
                 slackSend channel: slackChannel, color: warning, message: 'Failure.'
             }
         }
