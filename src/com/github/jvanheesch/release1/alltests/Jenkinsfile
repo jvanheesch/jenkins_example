@@ -4,6 +4,7 @@ package com.github.jvanheesch.release1.alltests
 @Library('test-joris')
 import static com.github.jvanheesch.Helper.*
 
+@Library('test-joris-java')
 import static com.github.jvanheesch.HelperJava.*
 
 def pom
