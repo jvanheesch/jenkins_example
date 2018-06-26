@@ -5,7 +5,7 @@ import static com.github.jvanheesch.GroovyConfig.*
 
 import com.github.jvanheesch.HelperGroovy
 
-//@Library('test-joris')
+@Library('test-joris')
 import static com.github.jvanheesch.Helper.*
 
 def pom
@@ -26,6 +26,7 @@ pipeline {
                 timestamps {
                     script {
                         slackSend channel: slackChannel, color: slackColor, message: 'Slack Message'
+                        fkeiogjiojgijgr
                     }
                 }
             }
