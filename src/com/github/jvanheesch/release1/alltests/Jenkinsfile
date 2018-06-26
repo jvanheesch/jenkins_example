@@ -85,7 +85,7 @@ pipeline {
             post {
                 unstable {
                     script {
-                        echo 'Echoing failure - TODO: integrate with slack.'
+                        slackSend channel: slackChannel, color: slackColor, warning: 'Unstable.'
                     }
                 }
             }
