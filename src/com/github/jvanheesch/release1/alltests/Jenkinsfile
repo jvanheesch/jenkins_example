@@ -86,7 +86,7 @@ pipeline {
             post {
                 unstable {
                     script {
-                        slackSend channel: slackChannel, color: slackColor, warning: 'Unstable.'
+                        slackSend channel: slackChannel, color: warning, message: 'Unstable.'
                     }
                 }
             }
@@ -95,7 +95,7 @@ pipeline {
     post {
         failure {
             script {
-                slackSend channel: slackChannel, color: slackColor, warning: 'Failure.'
+                slackSend channel: slackChannel, color: warning, message: 'Failure.'
             }
         }
     }
