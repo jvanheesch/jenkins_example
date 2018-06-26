@@ -5,7 +5,7 @@ import static com.github.jvanheesch.GroovyConfig.*
 
 import com.github.jvanheesch.HelperGroovy
 
-@Library('test-joris')
+//@Library('test-joris')
 import static com.github.jvanheesch.Helper.*
 
 def pom
