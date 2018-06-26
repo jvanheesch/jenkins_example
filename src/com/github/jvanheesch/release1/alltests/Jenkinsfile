@@ -13,7 +13,6 @@ pipeline {
     agent {
         // TODO_JORIS: waar kan ik de namen van agents terugvinden?
         label 'master'
-        testUtilities(this)
     }
 
     options {
@@ -37,6 +36,7 @@ pipeline {
                         echo 'shit1'
                         checkoutProject(this)
                         test(this)
+                        testUtilities(this)
                         pom = this.readMavenPom()
                     }
                 }
