@@ -1,8 +1,6 @@
 #!groovy​
 package com.github.jvanheesch.release1.alltests
 
-import com.github.jvanheesch.HelperJava
-
 @Library('test-joris')
 import static com.github.jvanheesch.Helper.*
 
@@ -12,7 +10,7 @@ pipeline {
     agent {
         // TODO_JORIS: waar kan ik de namen van agents terugvinden?
         label 'master'
-        HelperJava.someMethod()
+        someMethod()
     }
 
     options {
