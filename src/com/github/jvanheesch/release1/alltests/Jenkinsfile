@@ -26,7 +26,6 @@ pipeline {
                 timestamps {
                     script {
                         slackSend channel: slackChannel, color: slackColor, message: 'Slack Message'
-                        fkeiogjiojgijgr
                     }
                 }
             }
