@@ -10,7 +10,7 @@ class Helper {
     }
 
     static def checkoutProject(script) {
-        script.git branch: '20180618.testing.jenkins', changelog: false, poll: false, url: 'git@github.com:jvanheesch/util.git'
+        script.git branch: '20180618.testing.jenkins', changelog: false, poll: false, url: 'https://github.com/jvanheesch/util'
     }
 
     static def test(script) {
