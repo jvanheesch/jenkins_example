@@ -20,6 +20,11 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+    tools {
+        // jdk 'jdk8'
+        maven 'Maven 3.6.3'
+    }
+
     stages {
         stage('Slack') {
             steps {
